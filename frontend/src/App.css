@@ -1,0 +1,125 @@
+/* App container */
+.app-container {
+  padding: 20px;
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title */
+.app-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* File input */
+input[type="file"] {
+  display: block;
+  margin: 10px auto;
+  font-size: 16px;
+}
+
+/* Button group */
+.button-group {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Buttons */
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Submit button */
+button.submit-btn {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button.submit-btn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Beautify button */
+button.beautify-btn {
+  background-color: #2196F3;
+  color: white;
+}
+
+button.beautify-btn:hover:not(:disabled) {
+  background-color: #0b7dda;
+}
+
+/* Preview image */
+img.preview {
+  display: block;
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Beautified images section */
+.beautified-container {
+  margin-top: 20px;
+}
+
+.beautified-container h3 {
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Beautified images grid */
+.beautified-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.beautified-images img {
+  width: 48%;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.beautified-images img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .beautified-images img {
+    width: 100%;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .button-group button {
+    width: 100%;
+  }
+}
